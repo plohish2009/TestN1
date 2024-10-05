@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Moving_monster : MonoBehaviour
 {
+    //public int teleport = {12};
+    public int tracker = 3;
     private float speed = 0.5f;
     private Vector3 dir;
     private SpriteRenderer sprite;
