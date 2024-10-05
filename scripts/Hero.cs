@@ -8,11 +8,12 @@ public class Hero : MonoBehaviour
     //[SerializeField] private int lives = 5;
     [SerializeField] private float jumpForce = 0.1f;// force of jumpforce
     private bool isGrounded = false;
-    
+    private float horizontalmove = 0f;
 
 
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+    public Animator anim;
 
 
 
@@ -20,6 +21,7 @@ public class Hero : MonoBehaviour
     {
        rb = GetComponent<Rigidbody2D>();
        sprite = GetComponentInChildren<SpriteRenderer>();
+       anim = GetComponent<Animator>();
     }
 
 
@@ -31,15 +33,25 @@ public class Hero : MonoBehaviour
 
     private void Update()
     {
+        horizontalmove = Input.GetAxisRaw("Horizontal") * speed;
         if (Input.GetButton("Horizontal"))
         {
             Run();
 
         }
+        anim.SetFloat("movex", Mathf.Abs(horizontalmove));
         if (isGrounded && Input.GetButton("Jump"))
         {
             Jump();
             
+        }
+        if (isGrounded == false)
+        {
+            anim.SetBool("jumping", true);
+        }
+        else
+        {
+            anim.SetBool("jumping", false);
         }
     }
 
