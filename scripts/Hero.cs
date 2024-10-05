@@ -7,7 +7,7 @@ public class Hero : MonoBehaviour
     [SerializeField] private float speed = 3f;// speed
     //[SerializeField] private int lives = 5;
     [SerializeField] private float jumpForce = 0.1f;// force of jumpforce
-    private bool isGrounded = false;
+    public bool isGrounded = false;
     private float horizontalmove = 0f;
 
 
