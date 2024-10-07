@@ -17,6 +17,10 @@ public class Hero : MonoBehaviour
 
 
 
+    private void Start()
+    {
+        gameObject.transform.position = new Vector3(1, 3, 0);
+    }
     private void Awake()
     {
        rb = GetComponent<Rigidbody2D>();
