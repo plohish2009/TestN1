@@ -45,7 +45,7 @@ public class Hero : MonoBehaviour
     private void Update()
     {
         horizontalmove = Input.GetAxisRaw("Horizontal") * speed;
-        if (Input.GetButton("Horizontal"))
+        if (Mathf.Abs(horizontalmove) > 0.01)
         {
             Run();
 
