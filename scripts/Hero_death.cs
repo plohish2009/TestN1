@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Hero_death : MonoBehaviour
 {
-    public int[] teleport_cords = {3,3,3};
-    public int tracker = 0;
+
+    public static int[] teleport_cords = {3,3};
+    public static int tracker = 0;
 
     private void OnCollisionEnter2D(Collision2D other)
     {

@@ -14,12 +14,19 @@ public class Hero : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     public Animator anim;
+    // public Hero()
+    //  {
+    //     Hero_death massiv = new Hero_death();
+    //     var b = teleport_cords;
+    // }
 
 
 
     private void Start()
     {
-        gameObject.transform.position = new Vector3(1, 3, 0);
+        
+        gameObject.transform.position = new Vector3(Hero_death.teleport_cords[Hero_death.tracker],Hero_death.teleport_cords[Hero_death.tracker] + 1, 0);
+        //gameObject.transform.position = new Vector3(3, 3, 0);
     }
     private void Awake()
     {
