@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 477944828}
   m_Layer: 0
   m_Name: Flying_platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1025,7 +1025,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.022166252}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1036,7 +1036,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.0443325}
   m_EdgeRadius: 0
 --- !u!212 &477944830
 SpriteRenderer:
@@ -1099,8 +1099,8 @@ Transform:
   m_GameObject: {fileID: 477944827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.55, y: 3.11, z: 0}
-  m_LocalScale: {x: 4.3684, y: 1, z: 1}
+  m_LocalPosition: {x: -1.9589, y: 3.11, z: 0}
+  m_LocalScale: {x: 3.186311, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3929,7 +3929,7 @@ Transform:
   m_GameObject: {fileID: 1861507817}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.55, y: 1.81, z: 70.125496}
+  m_LocalPosition: {x: -2.38, y: 1.81, z: 70.125496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4271,7 +4271,7 @@ Transform:
   m_GameObject: {fileID: 1990585811}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.08, y: 3.87, z: -0.0033697132}
+  m_LocalPosition: {x: 9.21, y: 0.18, z: -0.0033697132}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

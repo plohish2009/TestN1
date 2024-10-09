@@ -5,7 +5,6 @@ using UnityEngine;
 public class Hero : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;// speed
-    //[SerializeField] private int lives = 5;
     [SerializeField] private float jumpForce = 0.1f;// force of jumpforce
     public bool isGrounded = false;
     private float horizontalmove = 0f;
@@ -82,6 +81,22 @@ public class Hero : MonoBehaviour
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.3f);
         isGrounded = collider.Length > 1;
     }
+
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "Platform")
+    //     {
+    //        this.transform.parent = collision.transform;
+    //     }
+    // }
+
+    // private void OnCollisionExit2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "Platform")
+    //     {
+    //         this.transform.parent = null;
+    //     }
+    // }
     
 
 }
