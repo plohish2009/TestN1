@@ -74,6 +74,7 @@ public class Hero : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        //rb.AddForce(Vector2.up * jumpForce);
     }
 
     private void CheckGround()
@@ -86,7 +87,7 @@ public class Hero : MonoBehaviour
     // {
     //     if (collision.gameObject.tag == "Platform")
     //     {
-    //        this.transform.parent = collision.transform;
+    //        this.gameObject.transform.parent = collision.transform;
     //     }
     // }
 
@@ -94,7 +95,8 @@ public class Hero : MonoBehaviour
     // {
     //     if (collision.gameObject.tag == "Platform")
     //     {
-    //         this.transform.parent = null;
+
+    //         this.gameObject.transform.parent = null;
     //     }
     // }
     
