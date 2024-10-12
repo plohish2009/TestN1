@@ -8,7 +8,6 @@ public class Hero : MonoBehaviour
     [SerializeField] private AudioSource bookSound;
 
     [SerializeField] private float speed = 3f;// speed
-    //[SerializeField] private int lives = 5;
     [SerializeField] private float jumpForce = 0.1f;// force of jumpforce
     public bool isGrounded = false;
     private float horizontalmove = 0f;
@@ -22,7 +21,13 @@ public class Hero : MonoBehaviour
 
     private void Start()
     {
+
         gameObject.transform.position = new Vector3(Hero_death.teleport_cords[Hero_death.tracker],Hero_death.teleport_cords[Hero_death.tracker + 1], 0);
+
+        
+        gameObject.transform.position = new Vector3(Hero_death.teleport_cords[Hero_death.tracker],Hero_death.teleport_cords[Hero_death.tracker + 1], 0);
+        //gameObject.transform.position = new Vector3(3, 3, 0);
+
     }
     private void Awake()
     {
@@ -77,7 +82,11 @@ public class Hero : MonoBehaviour
     {
         rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
 
+
         jumpSound.Play();
+
+        //rb.AddForce(Vector2.up * jumpForce);
+
     }
 
     private void CheckGround()
@@ -85,6 +94,23 @@ public class Hero : MonoBehaviour
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.3f);
         isGrounded = collider.Length > 1;
     }
+
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "Platform")
+    //     {
+    //        this.gameObject.transform.parent = collision.transform;
+    //     }
+    // }
+
+    // private void OnCollisionExit2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "Platform")
+    //     {
+
+    //         this.gameObject.transform.parent = null;
+    //     }
+    // }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
