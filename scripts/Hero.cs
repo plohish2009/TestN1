@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource bookSound;
+
     [SerializeField] private float speed = 3f;// speed
     //[SerializeField] private int lives = 5;
     [SerializeField] private float jumpForce = 0.1f;// force of jumpforce
@@ -19,7 +22,7 @@ public class Hero : MonoBehaviour
 
     private void Start()
     {
-        gameObject.transform.position = new Vector3(1, 3, 0);
+        gameObject.transform.position = new Vector3(Hero_death.teleport_cords[Hero_death.tracker],Hero_death.teleport_cords[Hero_death.tracker + 1], 0);
     }
     private void Awake()
     {
@@ -73,6 +76,8 @@ public class Hero : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+
+        jumpSound.Play();
     }
 
     private void CheckGround()
@@ -81,5 +86,13 @@ public class Hero : MonoBehaviour
         isGrounded = collider.Length > 1;
     }
     
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("book"))
+        {
+            
+        }
+        bookSound.Play();
+    }
 
 }
