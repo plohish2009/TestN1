@@ -6,6 +6,8 @@ public class Hero : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;// speed
     //[SerializeField] private int lives = 5;
+    public float fastspeed = 7f;
+    public float realspeed;
     [SerializeField] private float jumpForce = 0.1f;// force of jumpforce
     public bool isGrounded = false;
     private float horizontalmove = 0f;
@@ -62,10 +64,19 @@ public class Hero : MonoBehaviour
 
     private void Run()
     {
-
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            anim.SetBool("run", true);
+            realspeed = fastspeed;
+        }
+        else
+        {
+            anim.SetBool("run", false);
+            realspeed = speed;
+        }
         Vector3 dir = transform.right * Input.GetAxis("Horizontal");
 
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, realspeed * Time.deltaTime);
 
         sprite.flipX = dir.x < 0.0f;
     }
