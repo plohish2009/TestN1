@@ -3926,8 +3926,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  fastspeed: 7
+  realspeed: 0
   jumpForce: 9
-  isGrounded: 0
+  isGrounded: 1
   anim: {fileID: 2021388523}
 --- !u!50 &2021388520
 Rigidbody2D:
