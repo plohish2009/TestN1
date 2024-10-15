@@ -1,35 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Moving_monster : MonoBehaviour
 {
-    //public int teleport = {12};
-    public int tracker = 3;
-    private float speed = 0.5f;
-    private Vector3 dir;
-    private SpriteRenderer sprite;
-    // Start is called before the first frame update
+    [SerializeField]
+    Transform right;
+
+    [SerializeField]
+    Transform left;
+    private float speed = 3f;
+    private Rigidbody2D rb;
+    private Transform currentpoint;
     void Start()
     {
-        dir = transform.right;
+        rb = GetComponent<Rigidbody2D>();
+        currentpoint = left.transform;
     }
-
-    void Update()
+    private void Update()
     {
-        Move();
-    }
-
-    // Update is called once per frame
-    private void Move()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.1f + transform.right * dir.x * 0.7f, 0.1f);
-
-        if (colliders.Length > 0) dir *= -1f;
+        if (currentpoint == right)
         {
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, Time.deltaTime);
+            rb.velocity = new Vector2(speed, 0);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-speed, 0);
+        }
+        if (Vector2.Distance(transform.position, currentpoint.position) < 0.5f && currentpoint == left)
+        {
+            currentpoint = right;
+        }
+        if (Vector2.Distance(transform.position, currentpoint.position) < 0.5f && currentpoint == right)
+        {
+            currentpoint = left;
         }
     }
-
-
 }
