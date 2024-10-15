@@ -1403,7 +1403,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f4b0691b50fe4ea4193196425595d059, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 985f565f08fee4a4ea76d74c4dab8f61, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.67
   m_Pitch: 1
@@ -2321,7 +2321,6 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -5439,7 +5438,6 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ca28e8dc05c24fc46901e1f93a6aa7d7, type: 3}
-  m_audioClip: {fileID: 8300000, guid: 9689e53c4d672a042b4a69bce86fb2e2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
