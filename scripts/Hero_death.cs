@@ -5,8 +5,10 @@ using UnityEngine;
 public class Hero_death : MonoBehaviour
 {
 
+    [SerializeField] private AudioSource deathSound;
     public static int[] teleport_cords = {-3,3};
     public static int tracker = 0;
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -17,6 +19,7 @@ public class Hero_death : MonoBehaviour
             //gameObject.transform.position = Teleport_Point;
             gameObject.transform.position = new Vector3(teleport_cords[tracker], teleport_cords[tracker + 1], 0);
             
+            deathSound.Play();
         }
     }
 }
