@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource bookSound;
+
     [SerializeField] private float speed = 3f;// speed
+    //[SerializeField] private int lives = 5;
+    public float fastspeed = 7f;
+    public float realspeed;
     [SerializeField] private float jumpForce = 0.1f;// force of jumpforce
     public bool isGrounded = false;
     private float horizontalmove = 0f;
@@ -18,9 +24,13 @@ public class Hero : MonoBehaviour
 
     private void Start()
     {
+
+        gameObject.transform.position = new Vector3(Hero_death.teleport_cords[Hero_death.tracker],Hero_death.teleport_cords[Hero_death.tracker + 1], 0);
+
         
         gameObject.transform.position = new Vector3(Hero_death.teleport_cords[Hero_death.tracker],Hero_death.teleport_cords[Hero_death.tracker + 1], 0);
         //gameObject.transform.position = new Vector3(3, 3, 0);
+
     }
     private void Awake()
     {
@@ -39,7 +49,7 @@ public class Hero : MonoBehaviour
     private void Update()
     {
         horizontalmove = Input.GetAxisRaw("Horizontal") * speed;
-        if (Input.GetButton("Horizontal"))
+        if (Mathf.Abs(horizontalmove) > 0.01)
         {
             Run();
 
@@ -63,10 +73,19 @@ public class Hero : MonoBehaviour
 
     private void Run()
     {
-
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            anim.SetBool("run", true);
+            realspeed = fastspeed;
+        }
+        else
+        {
+            anim.SetBool("run", false);
+            realspeed = speed;
+        }
         Vector3 dir = transform.right * Input.GetAxis("Horizontal");
 
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, realspeed * Time.deltaTime);
 
         sprite.flipX = dir.x < 0.0f;
     }
@@ -74,7 +93,12 @@ public class Hero : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+
+
+        jumpSound.Play();
+
         //rb.AddForce(Vector2.up * jumpForce);
+
     }
 
     private void CheckGround()
@@ -100,5 +124,13 @@ public class Hero : MonoBehaviour
     //     }
     // }
     
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("book"))
+        {
+            
+        }
+        bookSound.Play();
+    }
 
 }
