@@ -16,10 +16,11 @@ public class Moving_monster : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        currentpoint = left.transform;
+        currentpoint = right.transform;
     }
     private void Update()
     {
+        Vector3 temp = transform.localScale;
         if (currentpoint == right)
         {
             rb.velocity = new Vector2(speed, 0);
@@ -30,10 +31,14 @@ public class Moving_monster : MonoBehaviour
         }
         if (Vector2.Distance(transform.position, currentpoint.position) < 0.5f && currentpoint == left)
         {
+            temp.x *= -1;
+            transform.localScale = temp;
             currentpoint = right;
         }
         if (Vector2.Distance(transform.position, currentpoint.position) < 0.5f && currentpoint == right)
         {
+            temp.x *= -1;
+            transform.localScale = temp;
             currentpoint = left;
         }
     }
