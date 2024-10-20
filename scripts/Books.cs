@@ -8,7 +8,7 @@ using UnityEngine;
 public class Books : MonoBehaviour
 {
     public GameObject[] GObject;
-    public int counter = 0;
+    public static int counter = 0;
     
     private void OnTriggerEnter2D(Collider2D collision)
    {
@@ -20,7 +20,7 @@ public class Books : MonoBehaviour
             gameObject.SetActive(false);
             counter++;
             Debug.Log(counter);
-            if (counter == 1)
+            if (counter == 4)
             {
                 Destroy(GObject[0]);
             }
