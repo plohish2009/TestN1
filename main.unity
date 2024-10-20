@@ -1059,7 +1059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44f7dfad4e6d004b8c621989ac418a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracker: 3
+  right: {fileID: 0}
+  left: {fileID: 0}
 --- !u!1 &407496117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,6 +1784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2981c05f470b3a42b4b96cad7721338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GObject: []
   counter: 0
 --- !u!1 &619394800
 GameObject:
@@ -3411,7 +3413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1236146446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3980,6 +3982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 300
+  batytSound: {fileID: 0}
 --- !u!1 &1719782837
 GameObject:
   m_ObjectHideFlags: 0
@@ -4100,6 +4103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 300
+  batytSound: {fileID: 0}
 --- !u!212 &1719782842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4666,7 +4670,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a479b093016c3e49b0d180b5b48f5e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSound: {fileID: 0}
+  bookSound: {fileID: 0}
   speed: 3
+  fastspeed: 7
+  realspeed: 0
   jumpForce: 9
   isGrounded: 0
   anim: {fileID: 2021388523}
@@ -4795,6 +4803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f42aaf151b8fc045bb59b5a51739aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 0}
 --- !u!1 &2022780924
 GameObject:
   m_ObjectHideFlags: 0
