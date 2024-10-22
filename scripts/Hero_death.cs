@@ -6,7 +6,7 @@ public class Hero_death : MonoBehaviour
 {
 
     [SerializeField] private AudioSource deathSound;
-    public static int[] teleport_cords = {-3,3};
+    public static int[] teleport_cords = {-3,2};
     public static int tracker = 0;
 
 
