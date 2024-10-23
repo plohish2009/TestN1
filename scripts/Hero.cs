@@ -84,21 +84,14 @@ public class Hero : MonoBehaviour
             realspeed = speed;
         }
         Vector3 dir = transform.right * Input.GetAxis("Horizontal");
-
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, realspeed * Time.deltaTime);
-
         sprite.flipX = dir.x < 0.0f;
     }
 
     private void Jump()
     {
         rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-
-
         jumpSound.Play();
-
-        //rb.AddForce(Vector2.up * jumpForce);
-
     }
 
     private void CheckGround()

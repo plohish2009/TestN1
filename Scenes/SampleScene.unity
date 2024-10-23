@@ -3320,7 +3320,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1797202821, guid: 00b6b886f8497174591de51c5ca47c90, type: 3}
   m_Color: {r: 0.73945355, g: 0.8207547, b: 0.7718758, a: 1}
   m_FlipX: 0
@@ -5086,8 +5086,8 @@ Transform:
   m_GameObject: {fileID: 420048430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.09, y: -3.096, z: 0.0627}
-  m_LocalScale: {x: 0.9492633, y: 0.9155318, z: 3.9454}
+  m_LocalPosition: {x: 4.124, y: -3.096, z: 0.0627}
+  m_LocalScale: {x: 0.99217, y: 0.9155318, z: 3.9454}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2120828392}
@@ -5484,6 +5484,7 @@ Transform:
   - {fileID: 362456517}
   - {fileID: 650870232}
   - {fileID: 1685544110}
+  - {fileID: 624367519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477944827
@@ -5604,7 +5605,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1797202821, guid: 00b6b886f8497174591de51c5ca47c90, type: 3}
   m_Color: {r: 0.73945355, g: 0.8207547, b: 0.7718758, a: 1}
   m_FlipX: 0
@@ -6740,12 +6741,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624367518}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.01, y: -0.23, z: 0.0033697132}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5812435, y: -5.49, z: 0.0033697132}
   m_LocalScale: {x: 0.3485919, y: 0.36607626, z: 0.43024787}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1798247168}
+  m_Father: {fileID: 473026721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &624367520
 AudioSource:
@@ -14215,8 +14216,8 @@ Transform:
   m_GameObject: {fileID: 1568609800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.872, y: -3.096, z: 0.0627}
-  m_LocalScale: {x: 0.9492633, y: 0.9155318, z: 3.9454}
+  m_LocalPosition: {x: 16.0241, y: -3.096, z: 0.0627}
+  m_LocalScale: {x: 1.4675591, y: 0.9155318, z: 3.9454}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2120828392}
@@ -15931,38 +15932,6 @@ Transform:
   - {fileID: 762322889}
   m_Father: {fileID: 1940320460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1798247167
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1798247168}
-  m_Layer: 0
-  m_Name: Batutik (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1798247168
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798247167}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3587565, y: -0.26, z: -0.0033697132}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 624367519}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1810529032
 GameObject:
   m_ObjectHideFlags: 0
@@ -17455,7 +17424,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 12
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
@@ -18846,7 +18815,6 @@ SceneRoots:
   - {fileID: 665329516}
   - {fileID: 1940320460}
   - {fileID: 473026721}
-  - {fileID: 1798247168}
   - {fileID: 477944831}
   - {fileID: 283030958}
   - {fileID: 1861507818}
